@@ -71,7 +71,7 @@ public class GameWindow{
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane();
-		
+		frame.pack();
 		panel.setLayout(new GridLayout(1, 2));
 		
 		ActionListener onClick = new ActionListener(){
@@ -99,9 +99,13 @@ public class GameWindow{
 		panel.add(xbutton);
 		panel.add(obutton);
 		
-		frame.add(panel);
-		frame.pack();
+		frame.add(panel);		
 		frame.setVisible(true);
+
+		java.net.URL imgURL = Board.class.getResource("nice.png");
+		ImageIcon icon = new ImageIcon(imgURL, "thumb");
+		
+		JOptionPane.showMessageDialog(frame, "Choose X or O", "Tic Tac Thumb", JOptionPane.INFORMATION_MESSAGE, icon);
 	}	
 	
 	public static void playerFirst(){
