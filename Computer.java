@@ -58,13 +58,12 @@ public class Computer extends Thread implements Runnable{
 					
 		}
 		if (board.hasXWon()) {
-         System.out.println("Unfortunately, you lost!");
-         GameWindow.displayResult("Unfortunately, you lost!");
+         if(GameWindow.choice==2) GameWindow.displayResult("Unfortunately, you lost!");
+         else GameWindow.displayResult("You win!");
       } else if (board.hasOWon()) {
-         System.out.println("You win!");
-         GameWindow.displayResult("You win!");
-      } else {
-         System.out.println("It's a draw!");
+         if(GameWindow.choice==2) GameWindow.displayResult("You win!");
+         else GameWindow.displayResult("Unfortunately, you lost!");
+      } else {         
          GameWindow.displayResult("It's a draw!");
       }
 	

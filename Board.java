@@ -220,8 +220,6 @@ public class Board{
         }
     } 
     
-    
-    
     public boolean isGameOver() {
         //Game is over is someone has won, or board is full (draw)
         return (hasXWon() || hasOWon() || getAvailableStates().isEmpty());
