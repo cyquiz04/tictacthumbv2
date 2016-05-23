@@ -33,6 +33,21 @@ public class GameWindow{
 		c.start();	
 	}
 
+	public static void displayResult(String result){
+		JOptionPane.showMessageDialog(frame, result);		
+		Object[] options = {"Yes", "No"};
+
+		int choice = JOptionPane.showOptionDialog(frame, "Would you like to play again?", "Tic Tac Thumb", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+		if(choice == 0){			
+			frame.setVisible(false);
+			XorO();
+		}
+		else{
+			JOptionPane.showMessageDialog(frame, "Bye bye! -insert thumbs up-");
+			System.exit(0);
+		}
+	}
+
 	public static void createWindow(){
 		frame.setVisible(false);
 		
