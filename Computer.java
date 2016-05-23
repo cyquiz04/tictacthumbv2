@@ -29,7 +29,7 @@ public class Computer extends Thread implements Runnable{
 				//if it is not player's turn
 
 					try {
-						Thread.sleep(200);
+						Thread.sleep(1000);
 					}catch(InterruptedException e){
 						e.printStackTrace();
 					}
@@ -46,7 +46,7 @@ public class Computer extends Thread implements Runnable{
 				if(board.isGameOver())	break;
 					
 				try{
-					Thread.sleep(200);				
+					Thread.sleep(1000);				
 				}catch(InterruptedException e){
 					e.printStackTrace();
 				}

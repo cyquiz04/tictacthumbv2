@@ -15,7 +15,7 @@ public class Tile extends JButton implements ActionListener{
 	static char playerMove;
 	static char computerMove;
 	static boolean player_turn;
-	//static Board board;
+	static Board board;
 	
 	public Tile(char symbol, Board b){
 		this.value = 0;
@@ -28,7 +28,7 @@ public class Tile extends JButton implements ActionListener{
       this.setFont(new Font("Arial", Font.PLAIN, 90));		
 		this.addActionListener(this);
 		System.out.println(playerMove);
-		//board = b;
+		board = b;
 		
 	}
 	
@@ -42,7 +42,7 @@ public class Tile extends JButton implements ActionListener{
 		if(playerMove == 'X') this.value = 1;
 		else this.value = 2;	
 		
-		//board.player_turn = false;
+		board.player_turn = false;
 		
 	}
 	
