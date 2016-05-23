@@ -22,13 +22,15 @@ public class GameWindow{
 	}
 	
 	public static void gamePlay(){
-		if (choice == 2) {
+	/*	if (choice == 2) {
 			b.computerMove( new Point (1, 1) );
-		}
+			b.player_turn = true;
+		}else{
+			b.player_turn = false;
+		}*/
 	
 		Computer c = new Computer(b);
-		
-		c.run();	
+		c.start();	
 	}
 
 	public static void createWindow(){
@@ -56,8 +58,6 @@ public class GameWindow{
 		frame.add(panel);
 		frame.pack();
 		frame.setVisible(true);	
-		
-		gamePlay();
 	}
 	
 	
@@ -80,6 +80,7 @@ public class GameWindow{
 				if(source.getText().equals("X")) playerFirst();	
 				else computerFirst();
 				createWindow();
+				gamePlay();
 			}
 		};
 		
